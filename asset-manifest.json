@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/space-tourism-react/static/js/main.9c6fcd3f.js",
+    "static/media/background-home-desktop.jpg": "/space-tourism-react/static/media/background-home-desktop.cdf3864ecbfdf20e8c3b.jpg",
+    "index.html": "/space-tourism-react/index.html",
+    "main.9c6fcd3f.js.map": "/space-tourism-react/static/js/main.9c6fcd3f.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9c6fcd3f.js"
+  ]
+}
