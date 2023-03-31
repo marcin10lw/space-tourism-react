@@ -4,11 +4,14 @@ import { ThemeProvider } from "styled-components";
 import App from "./App";
 import GlobalStyle from "./GlobalStyle";
 import { theme } from "./theme";
+import { HashRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <App />
+    <HashRouter>
+      <GlobalStyle />
+      <App />
+    </HashRouter>
   </ThemeProvider>
 );
