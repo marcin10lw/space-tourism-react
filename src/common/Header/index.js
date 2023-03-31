@@ -1,4 +1,4 @@
-import { Logo, StyledHeader } from "./styled";
+import { DecorationLine, Logo, StyledHeader } from "./styled";
 import logo from "../../assets/shared/logo.svg";
 import Navbar from "../Navbar";
 
@@ -6,7 +6,8 @@ const Header = () => {
   return (
     <StyledHeader>
       <Logo src={logo} alt="logo" />
-      <Navbar />
+        <DecorationLine />
+        <Navbar />
     </StyledHeader>
   );
 };
