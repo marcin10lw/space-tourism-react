@@ -11,11 +11,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    min-height: 100vh;
+    font-family: "Barlow Condensed", sans-serif;
+    height: 100vh;
     background-image: url(${homeBackgroundDesktop});
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
+    color: ${({ theme }) => theme.colors.white}
   }
 `;
 
