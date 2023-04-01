@@ -2,8 +2,11 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const white = ({ theme }) => theme.colors.white;
+const bpMobile = ({ theme }) => theme.breakpoints.mobile;
+const bpTablet = ({ theme }) => theme.breakpoints.tablet;
 
 export const StyledNavbar = styled.nav`
+  flex-basis: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,6 +21,11 @@ export const LinksList = styled.ul`
   display: flex;
   align-items: center;
   gap: 48px;
+
+  @media (max-width: ${bpTablet}px) {
+    margin: 0 48px;
+    gap: 37px;
+  }
 `;
 
 export const ListElement = styled.li``;
@@ -25,6 +33,10 @@ export const ListElement = styled.li``;
 export const Number = styled.span`
   margin-right: 12px;
   font-weight: 700;
+
+  @media (max-width: ${bpTablet}px) {
+    display: none;
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -62,5 +74,10 @@ export const StyledNavLink = styled(NavLink)`
       bottom: 0;
       z-index: 100;
     }
+  }
+
+  @media (max-width: ${bpTablet}px) {
+    letter-spacing: 2.36px;
+    font-size: 14px;
   }
 `;
