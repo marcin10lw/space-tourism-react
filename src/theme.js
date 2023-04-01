@@ -4,4 +4,8 @@ export const theme = {
     blue: "#D0D6F9",
     white: "#FFFFFF",
   },
+  breakpoints: {
+    tablet: 1180,
+    mobile: 767,
+  },
 };
