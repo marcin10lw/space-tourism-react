@@ -3,6 +3,21 @@ import styled, { css } from "styled-components";
 import hamburgerIcon from "../../assets/shared/icon-hamburger.svg";
 import closeIcon from "../../assets/shared/icon-close.svg";
 
+export const BackDrop = styled.div`
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  ${({ isMenuOpen }) =>
+    isMenuOpen &&
+    css`
+      display: block;
+    `}
+`;
+
 export const StyledNavbar = styled.nav`
   flex-basis: 50%;
   display: flex;

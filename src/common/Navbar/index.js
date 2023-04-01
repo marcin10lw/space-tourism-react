@@ -7,6 +7,7 @@ import {
   StyledNavLink,
   OpenMenuButton,
   CloseMenuButton,
+  BackDrop,
 } from "./styled";
 
 const Navbar = () => {
@@ -14,8 +15,11 @@ const Navbar = () => {
 
   return (
     <>
+      <BackDrop isMenuOpen={isMenuOpen} onClick={() => setIsMenuOpen(false)} />
+      <OpenMenuButton onClick={() => setIsMenuOpen(true)} />
       <StyledNavbar isMenuOpen={isMenuOpen}>
-        <LinksList>
+        <CloseMenuButton onClick={() => setIsMenuOpen(false)} />
+        <LinksList onClick={() => setIsMenuOpen(false)}>
           <ListElement>
             <StyledNavLink to="/home">
               <Number>00</Number>
@@ -44,9 +48,7 @@ const Navbar = () => {
             </StyledNavLink>
           </ListElement>
         </LinksList>
-        <CloseMenuButton onClick={() => setIsMenuOpen(false)} />
       </StyledNavbar>
-      <OpenMenuButton onClick={() => setIsMenuOpen(true)} />
     </>
   );
 };
