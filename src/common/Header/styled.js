@@ -1,20 +1,26 @@
 import styled from "styled-components";
 
-const bpMobile = ({ theme }) => theme.breakpoints.mobile;
-const bpTablet = ({ theme }) => theme.breakpoints.tablet;
-
 export const StyledHeader = styled.header`
   padding: 40px 0 0 55px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: ${bpTablet}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     padding: 0 0 0 40px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    padding: 24px 0 0 24px;
   }
 `;
 
-export const Logo = styled.img``;
+export const Logo = styled.img`
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    width: 40px;
+    height: 40px;
+  }
+`;
 
 export const DecorationLine = styled.div`
   height: 1px;
@@ -24,7 +30,7 @@ export const DecorationLine = styled.div`
   z-index: 99;
   flex-basis: 50%;
 
-  @media (max-width: ${bpTablet}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     display: none;
   }
 `;

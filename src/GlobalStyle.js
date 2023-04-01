@@ -21,11 +21,12 @@ const GlobalStyle = createGlobalStyle`
 
   #root {
     height: 100vh;
+    position: relative;
 
     ${({ path }) =>
       path === "/home" &&
       css`
-        background:  center / cover url(${homeBackgroundDesktop});
+        background: no-repeat fixed center / cover url(${homeBackgroundDesktop});
       `}
     ${({ path }) =>
       path === "/destination" &&
