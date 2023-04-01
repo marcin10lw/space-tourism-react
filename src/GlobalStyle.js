@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     ${({ path }) =>
       path === "/home" &&
       css`
-        background: no-repeat fixed center / cover url(${homeBackgroundDesktop});
+        background:  center / cover url(${homeBackgroundDesktop});
       `}
     ${({ path }) =>
       path === "/destination" &&
