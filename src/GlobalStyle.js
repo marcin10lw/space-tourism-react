@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
   #root {
     height: 100vh;
     position: relative;
+    overflow: hidden;
 
     ${({ path }) =>
       path === "/home" &&
