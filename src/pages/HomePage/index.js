@@ -3,8 +3,15 @@ import Heading from "../../components/Heading";
 import { Button, HomeArticle, HomeSection, HomeTitle } from "./styled";
 import Description from "../../components/Description";
 import description from "./description";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const onButtonClick = () => {
+    navigate("/destination");
+  };
+
   return (
     <Main>
       <HomeSection>
@@ -13,7 +20,7 @@ const HomePage = () => {
           <HomeTitle>SPACE</HomeTitle>
           <Description description={description} />
         </HomeArticle>
-        <Button>EXPLORE</Button>
+        <Button onClick={onButtonClick}>EXPLORE</Button>
       </HomeSection>
     </Main>
   );
