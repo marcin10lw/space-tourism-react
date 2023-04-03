@@ -1,6 +1,8 @@
-**Development in progress...**
+# **Development in progress...**
 
-# Getting Started with Create React App
+[DEMO](https://marcin10lw.github.io/space-tourism-react/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
