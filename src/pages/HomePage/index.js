@@ -19,7 +19,11 @@ const HomePage = () => {
         as={motion.section}
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        exit={{ y: window.innerWidth, transition: { duration: 0.4 } }}
+        exit={{
+          x: 100,
+          opacity: 0,
+          transition: { duration: 0.1 },
+        }}
       >
         <HomeArticle>
           <Heading content="so, you want to travel to" />
