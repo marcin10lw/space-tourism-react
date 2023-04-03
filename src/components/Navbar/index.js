@@ -36,14 +36,14 @@ const Navbar = () => {
 
           <ListElement>
             <StyledNavLink to="/crew">
-              <Number>00</Number>
+              <Number>02</Number>
               CREW
             </StyledNavLink>
           </ListElement>
 
           <ListElement>
             <StyledNavLink to="/technology">
-              <Number>00</Number>
+              <Number>03</Number>
               TECHNOLOGY
             </StyledNavLink>
           </ListElement>

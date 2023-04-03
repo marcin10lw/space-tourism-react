@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <StyledHeader>
       <Logo src={logo} alt="logo" />
-        <DecorationLine />
-        <Navbar />
+      <DecorationLine />
+      <Navbar />
     </StyledHeader>
   );
 };

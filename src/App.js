@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import GlobalStyle from "./GlobalStyle";
-import Header from "./common/Header";
+import Header from "./components/Header";
 
 function App() {
   const { pathname } = useLocation();
