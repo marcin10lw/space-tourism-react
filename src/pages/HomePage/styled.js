@@ -2,10 +2,18 @@ import styled from "styled-components";
 
 export const HomeSection = styled.section`
   width: 100%;
+  margin-top: 250px;
   display: grid;
   grid-template-columns: 450px auto;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    margin: 106px 0 90px;
+    grid-template-columns: 450px;
+    text-align: center;
+    gap: 156px;
+  }
 `;
 
 export const HomeArticle = styled.article``;
@@ -13,8 +21,8 @@ export const HomeArticle = styled.article``;
 export const HomeTitle = styled.h2`
   font-family: "Bellefair", sans-serif;
   font-size: 150px;
-  font-weight: 400;
   margin: 24px 0;
+  font-weight: 400;
   color: ${({ theme }) => theme.colors.white};
 `;
 
@@ -53,6 +61,16 @@ export const Button = styled.button`
       width: 450px;
       height: 450px;
       pointer-events: none;
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+        display: none;
+      }
     }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    margin: auto;
+    width: 242px;
+    height: 242px;
   }
 `;

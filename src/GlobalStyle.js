@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
 

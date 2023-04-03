@@ -6,4 +6,9 @@ export const StyledDescription = styled.p`
   font-size: 18px;
   line-height: 32px;
   color: ${({ theme }) => theme.colors.blue};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    font-size: 16px;
+    line-height: 28px;
+  }
 `;
