@@ -2,17 +2,22 @@ import styled from "styled-components";
 
 export const HomeSection = styled.section`
   width: 100%;
-  margin-top: 250px;
+  padding-top: 250px;
   display: grid;
-  grid-template-columns: 450px auto;
+  grid-template-columns: minmax(0, 450px) auto;
   align-items: center;
   justify-content: space-around;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
-    margin: 106px 0 90px;
-    grid-template-columns: 450px;
+    padding: 106px 0 90px;
+    grid-template-columns: minmax(0, 450px);
     text-align: center;
     gap: 156px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    padding: 48px 0;
+    gap: 80px;
   }
 `;
 
@@ -24,6 +29,11 @@ export const HomeTitle = styled.h2`
   margin: 24px 0;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.white};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 80px;
+    margin: 16px 0;
+  }
 `;
 
 export const Button = styled.button`
@@ -53,6 +63,10 @@ export const Button = styled.button`
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: width 200ms ease-in-out, height 200ms ease-in-out;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+      display: none;
+    }
   }
 
   &:hover {
@@ -61,10 +75,6 @@ export const Button = styled.button`
       width: 450px;
       height: 450px;
       pointer-events: none;
-
-      @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
-        display: none;
-      }
     }
   }
 
@@ -72,5 +82,12 @@ export const Button = styled.button`
     margin: auto;
     width: 242px;
     height: 242px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+    letter-spacing: 1.25px;
   }
 `;

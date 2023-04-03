@@ -11,6 +11,11 @@ export const StyledHeading = styled.h1`
     font-size: 20px;
     letter-spacing: 3.38px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
 `;
 
 export const HeadingNumber = styled.span``;
