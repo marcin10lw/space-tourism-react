@@ -31,9 +31,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
     overflow: hidden;
+    
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+      height: auto;
+      min-height: 100vh;
+    }
 
     ${({ path }) =>
       path === "/home" &&

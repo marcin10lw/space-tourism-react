@@ -6,6 +6,7 @@ export const DestinationSection = styled.section`
   justify-content: space-around;
   align-items: center;
   padding-top: 64px;
+  overflow: hidden;
 `;
 
 export const DestinationImage = styled.img``;

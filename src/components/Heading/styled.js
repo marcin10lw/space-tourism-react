@@ -20,4 +20,6 @@ export const StyledHeading = styled.h1`
 
 export const HeadingNumber = styled.span`
   margin-right: 28px;
+  color: ${({ theme }) => theme.colors.white};
+  opacity: 0.25;
 `;
