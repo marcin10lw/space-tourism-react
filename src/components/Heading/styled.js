@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledHeading = styled.h1`
-  margin: 0;
+  margin: 76px 0 0 11.5%;
   font-size: 28px;
   letter-spacing: 4.72px;
   font-weight: 400;
@@ -18,4 +18,6 @@ export const StyledHeading = styled.h1`
   }
 `;
 
-export const HeadingNumber = styled.span``;
+export const HeadingNumber = styled.span`
+  margin-right: 28px;
+`;
