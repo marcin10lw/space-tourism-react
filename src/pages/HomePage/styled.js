@@ -8,6 +8,10 @@ export const HomeSection = styled.section`
   align-items: center;
   justify-content: space-around;
 
+  h1 {
+    margin: 0;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     padding: 106px 0 90px;
     grid-template-columns: minmax(0, 450px);
