@@ -8,14 +8,12 @@ import {
   DestinationSection,
   DestinationTitle,
 } from "./styled";
-import moonImage from "../../assets/destination/image-moon.png";
 import { useState } from "react";
 
 const Destination = () => {
   const { destinations } = data;
-
-  const [destinationIndex, setDestinationIndex] = useState(0);
-  const destination = destinations[destinationIndex];
+  const [index, setIndex] = useState(0);
+  const destination = destinations[index];
 
   const [listData, setListData] = useState([
     { id: 0, name: "moon", isActive: true },
@@ -44,12 +42,15 @@ const Destination = () => {
 
   const onButtonClick = (name, id) => {
     updateListData(name);
-    setDestinationIndex(id);
+    setIndex(id);
   };
 
   return (
     <DestinationSection>
-      <DestinationImage src={destination.images.png} alt={destination.name} />
+      <DestinationImage
+        src={`${process.env.PUBLIC_URL}/${destination.images.png}`}
+        alt={destination.name}
+      />
       <DestinationArticle>
         <nav>
           <DestinationList>
