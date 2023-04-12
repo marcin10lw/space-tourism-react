@@ -14,6 +14,6 @@ export const Description = styled.p`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 15px;
-    line-height: 28px;
+    line-height: 25px;
   }
 `;

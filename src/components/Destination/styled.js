@@ -14,6 +14,11 @@ export const DestinationSection = styled.section`
     gap: 53px;
     text-align: center;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    padding: 32px 0 58px;
+    gap: 26px;
+  }
 `;
 
 export const DestinationImage = styled.img`
@@ -21,6 +26,10 @@ export const DestinationImage = styled.img`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     max-width: 300px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    max-width: 170px;
   }
 `;
 
@@ -37,6 +46,10 @@ export const DestinationList = styled.ul`
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     justify-content: center;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    gap: 26px;
+  }
 `;
 
 export const DestinationButton = styled.button`
@@ -48,6 +61,12 @@ export const DestinationButton = styled.button`
   cursor: pointer;
   position: relative;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    padding: 0 0 8px;
+    font-size: 14px;
+    letter-spacing: 2.36px;
+  }
+
   &:hover {
     &:before {
       content: "";
@@ -57,7 +76,7 @@ export const DestinationButton = styled.button`
       background-color: ${({ theme }) => theme.colors.white};
       opacity: 0.5;
       position: absolute;
-      bottom: 0;
+      bottom: 0px;
     }
   }
 
@@ -73,7 +92,7 @@ export const DestinationButton = styled.button`
         width: 100%;
         background-color: ${({ theme }) => theme.colors.white};
         position: absolute;
-        bottom: 0;
+        bottom: 0px;
       }
     `};
 `;
@@ -88,6 +107,11 @@ export const DestinationTitle = styled.h2`
     font-size: 80px;
     margin: 32px 0 8px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    margin: 22px 0 1px;
+    font-size: 56px;
+  }
 `;
 
 export const DestinationDescription = styled(Description)`
@@ -97,6 +121,10 @@ export const DestinationDescription = styled(Description)`
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     padding-bottom: 50px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    padding-bottom: 32px;
+  }
 `;
 
 export const DestinationExtraInfoWrapepr = styled.div`
@@ -104,7 +132,9 @@ export const DestinationExtraInfoWrapepr = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    grid-template-columns: auto;
+    gap: 32px;
   }
 `;
 
