@@ -16,6 +16,8 @@ export const StyledHeading = styled.h1`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 16px;
     letter-spacing: 2.7px;
+    margin: 24px 0 0;
+    text-align: center;
   }
 `;
 
