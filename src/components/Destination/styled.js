@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Description } from "../Description";
 
 export const DestinationSection = styled.section`
   display: grid;
@@ -6,10 +7,22 @@ export const DestinationSection = styled.section`
   justify-content: space-around;
   align-items: center;
   padding-top: 64px;
-  overflow: hidden;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    padding: 60px 0;
+    grid-template-columns: minmax(0, 573px);
+    gap: 53px;
+    text-align: center;
+  }
 `;
 
-export const DestinationImage = styled.img``;
+export const DestinationImage = styled.img`
+  margin: auto;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    max-width: 300px;
+  }
+`;
 
 export const DestinationArticle = styled.article``;
 
@@ -20,6 +33,10 @@ export const DestinationList = styled.ul`
   display: flex;
   align-items: center;
   gap: 36px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    justify-content: center;
+  }
 `;
 
 export const DestinationButton = styled.button`
@@ -66,10 +83,40 @@ export const DestinationTitle = styled.h2`
   font-family: "Bellefair", sans-serif;
   font-weight: 400;
   font-size: 100px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    font-size: 80px;
+    margin: 32px 0 8px;
+  }
 `;
 
-export const DestinationExtraInfoWrapepr = styled.div``;
+export const DestinationDescription = styled(Description)`
+  padding-bottom: 54px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.brightGrey};
 
-export const DestinationExtraInfo = styled.div``;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    padding-bottom: 50px;
+  }
+`;
 
-export const DestinationExtraValue = styled.div``;
+export const DestinationExtraInfoWrapepr = styled.div`
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+  }
+`;
+
+export const DestinationExtraInfo = styled.div`
+  font-size: 14px;
+  letter-spacing: 2.36px;
+  color: ${({ theme }) => theme.colors.blue};
+`;
+
+export const DestinationExtraValue = styled.div`
+  font-family: "Bellefair", sans-serif;
+  font-size: 28px;
+  margin-top: 12px;
+  color: ${({ theme }) => theme.colors.white};
+`;

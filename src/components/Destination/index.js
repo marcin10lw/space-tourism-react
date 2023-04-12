@@ -1,8 +1,11 @@
 import data from "../../data.json";
-import { Description } from "../Description";
 import {
   DestinationArticle,
   DestinationButton,
+  DestinationDescription,
+  DestinationExtraInfo,
+  DestinationExtraInfoWrapepr,
+  DestinationExtraValue,
   DestinationImage,
   DestinationList,
   DestinationSection,
@@ -69,7 +72,19 @@ const Destination = () => {
         <DestinationTitle>
           {destination.name.toLocaleUpperCase()}
         </DestinationTitle>
-        <Description>{destination.description}</Description>
+        <DestinationDescription>
+          {destination.description}
+        </DestinationDescription>
+        <DestinationExtraInfoWrapepr>
+          <div>
+            <DestinationExtraInfo>AVG. DISTANCE</DestinationExtraInfo>
+            <DestinationExtraValue>384,400 KM</DestinationExtraValue>
+          </div>
+          <div>
+            <DestinationExtraInfo>EST. TRAVEL TIME</DestinationExtraInfo>
+            <DestinationExtraValue>384,400 KM</DestinationExtraValue>
+          </div>
+        </DestinationExtraInfoWrapepr>
       </DestinationArticle>
     </DestinationSection>
   );
