@@ -1,6 +1,5 @@
 import data from "../../data.json";
 import {
-  DestinationArticle,
   DestinationButton,
   DestinationDescription,
   DestinationExtraInfo,
@@ -54,7 +53,7 @@ const Destination = () => {
         src={`${process.env.PUBLIC_URL}/${destination.images.png}`}
         alt={destination.name}
       />
-      <DestinationArticle>
+      <article>
         <nav>
           <DestinationList>
             {listData.map(({ name, isActive, id }) => (
@@ -85,7 +84,7 @@ const Destination = () => {
             <DestinationExtraValue>384,400 KM</DestinationExtraValue>
           </div>
         </DestinationExtraInfoWrapepr>
-      </DestinationArticle>
+      </article>
     </DestinationSection>
   );
 };

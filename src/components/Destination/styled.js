@@ -33,8 +33,6 @@ export const DestinationImage = styled.img`
   }
 `;
 
-export const DestinationArticle = styled.article``;
-
 export const DestinationList = styled.ul`
   padding: 0;
   margin: 0;
