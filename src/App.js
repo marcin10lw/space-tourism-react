@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import { AnimatePresence } from "framer-motion";
 import DestinationPage from "./pages/DestinationPage";
+import CrewPage from "./pages/CrewPage";
 
 function App() {
   const location = useLocation();
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/destination" element={<DestinationPage />} />
+          <Route path="/crew" element={<CrewPage />} />
         </Routes>
       </AnimatePresence>
     </>
