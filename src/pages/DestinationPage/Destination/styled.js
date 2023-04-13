@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Description } from "../Description";
+import { Description } from "../../../components/Description";
 
 export const DestinationSection = styled.section`
   display: grid;

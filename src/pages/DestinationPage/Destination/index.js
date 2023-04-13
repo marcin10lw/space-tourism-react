@@ -1,4 +1,4 @@
-import data from "../../data.json";
+import data from "../../../data.json";
 import {
   DestinationButton,
   DestinationDescription,
@@ -24,10 +24,10 @@ const Destination = () => {
     { id: 3, name: "titan", isActive: false },
   ]);
 
-  const updateListData = (name) => {
+  const updateListData = (id) => {
     setListData((listData) =>
       listData.map((listElement) => {
-        if (listElement.name === name) {
+        if (listElement.id === id) {
           return {
             ...listElement,
             isActive: true,
@@ -42,8 +42,8 @@ const Destination = () => {
     );
   };
 
-  const onButtonClick = (name, id) => {
-    updateListData(name);
+  const onButtonClick = (id) => {
+    updateListData(id);
     setIndex(id);
   };
 
@@ -57,9 +57,9 @@ const Destination = () => {
         <nav>
           <DestinationList>
             {listData.map(({ name, isActive, id }) => (
-              <li key={name}>
+              <li key={id}>
                 <DestinationButton
-                  onClick={() => onButtonClick(name, id)}
+                  onClick={() => onButtonClick(id)}
                   isActive={isActive}
                 >
                   {name.toLocaleUpperCase()}
@@ -77,11 +77,15 @@ const Destination = () => {
         <DestinationExtraInfoWrapepr>
           <div>
             <DestinationExtraInfo>AVG. DISTANCE</DestinationExtraInfo>
-            <DestinationExtraValue>384,400 KM</DestinationExtraValue>
+            <DestinationExtraValue>
+              {destination.distance.toLocaleUpperCase()}
+            </DestinationExtraValue>
           </div>
           <div>
             <DestinationExtraInfo>EST. TRAVEL TIME</DestinationExtraInfo>
-            <DestinationExtraValue>384,400 KM</DestinationExtraValue>
+            <DestinationExtraValue>
+              {destination.travel.toLocaleUpperCase()}
+            </DestinationExtraValue>
           </div>
         </DestinationExtraInfoWrapepr>
       </article>

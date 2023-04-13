@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Destination from "../../components/Destination";
+import Destination from "./Destination";
 import Heading from "../../components/Heading";
 import { Main } from "../../components/Main";
 
