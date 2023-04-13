@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Barlow Condensed", sans-serif;
     color: ${({ theme }) => theme.colors.white};
-    background: #0a0a0a;
+    background: #0b0e17;
   }
 
   #root {
