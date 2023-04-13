@@ -126,8 +126,11 @@ export const TechnologyDescription = styled(Description)`
 `;
 
 export const ImageWrapper = styled.div`
+  margin-left: 20px;
+
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     width: 100%;
+    margin-left: 0;
   }
 `;
 

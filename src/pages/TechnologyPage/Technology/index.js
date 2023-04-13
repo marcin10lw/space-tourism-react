@@ -14,6 +14,7 @@ import data from "../../../data.json";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useUpdateData } from "../../../useUpdateData";
+import { useSwipeable } from "react-swipeable";
 
 const Technology = () => {
   const matches = useMediaQuery("(max-width: 1180px)");
@@ -26,12 +27,29 @@ const Technology = () => {
     { id: 1, isActive: false },
     { id: 2, isActive: false },
   ];
-  const { listData, updateListData } = useUpdateData(initialState);
+  const { listData, updateListData } = useUpdateData(initialState, index);
 
   const onButtonClick = (id) => {
     updateListData(id);
     setIndex(id);
   };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (index > 1) {
+        setIndex(0);
+      } else {
+        setIndex((index) => index + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (index < 1) {
+        setIndex(2);
+      } else {
+        setIndex((index) => index - 1);
+      }
+    },
+  });
 
   return (
     <TechnologySection>
@@ -66,6 +84,7 @@ const Technology = () => {
       </TechnologyArticle>
 
       <ImageWrapper
+        {...handlers}
         as={motion.div}
         initial={{ opacity: 0, x: window.innerWidth }}
         animate={{
