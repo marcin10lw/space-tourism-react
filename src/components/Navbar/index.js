@@ -8,16 +8,27 @@ import {
   OpenMenuButton,
   CloseMenuButton,
   BackDrop,
+  OpenMenuSwipe,
 } from "./styled";
+import { useSwipeable } from "react-swipeable";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const openMenuHandlers = useSwipeable({
+    onSwipedLeft: () => setIsMenuOpen(true),
+  });
+
+  const closeMenuHandlers = useSwipeable({
+    onSwipedRight: () => setIsMenuOpen(false),
+  });
+
   return (
     <>
+      <OpenMenuSwipe {...openMenuHandlers} />
       <BackDrop isMenuOpen={isMenuOpen} onClick={() => setIsMenuOpen(false)} />
       <OpenMenuButton onClick={() => setIsMenuOpen(true)} />
-      <StyledNavbar isMenuOpen={isMenuOpen}>
+      <StyledNavbar isMenuOpen={isMenuOpen} {...closeMenuHandlers}>
         <CloseMenuButton onClick={() => setIsMenuOpen(false)} />
         <LinksList onClick={() => setIsMenuOpen(false)}>
           <ListElement>

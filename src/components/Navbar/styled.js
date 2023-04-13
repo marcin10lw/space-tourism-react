@@ -3,6 +3,20 @@ import styled, { css } from "styled-components";
 import hamburgerIcon from "../../assets/shared/icon-hamburger.svg";
 import closeIcon from "../../assets/shared/icon-close.svg";
 
+export const OpenMenuSwipe = styled.div`
+  display: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    z-index: 99;
+  }
+`;
+
 export const BackDrop = styled.div`
   display: none;
   position: fixed;
@@ -48,6 +62,7 @@ export const OpenMenuButton = styled.button`
   display: none;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    z-index: 199;
     display: block;
     width: 24px;
     height: 21px;
