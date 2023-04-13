@@ -125,6 +125,12 @@ export const TechnologyDescription = styled(Description)`
   }
 `;
 
+export const ImageWrapper = styled.div`
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    width: 100%;
+  }
+`;
+
 export const TechnologyImage = styled.img`
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     width: 102%;

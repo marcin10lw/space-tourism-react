@@ -1,5 +1,6 @@
 import { useMediaQuery } from "@mui/material";
 import {
+  ImageWrapper,
   TechnologyArticle,
   TechnologyButton,
   TechnologyDescription,
@@ -11,6 +12,7 @@ import {
 } from "./styled";
 import data from "../../../data.json";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Technology = () => {
   const matches = useMediaQuery("(max-width: 1180px)");
@@ -49,7 +51,15 @@ const Technology = () => {
 
   return (
     <TechnologySection>
-      <TechnologyArticle>
+      <TechnologyArticle
+        as={motion.article}
+        initial={{ opacity: 0, x: -window.innerWidth }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 0.6, delay: 0.1 },
+        }}
+      >
         <nav>
           <TechnologyNavList>
             {listData.map(({ id, isActive }) => (
@@ -71,15 +81,25 @@ const Technology = () => {
         </div>
       </TechnologyArticle>
 
-      {matches ? (
-        <TechnologyImage
-          src={`${process.env.PUBLIC_URL}${vehicle.images.landscape}`}
-        />
-      ) : (
-        <TechnologyImage
-          src={`${process.env.PUBLIC_URL}${vehicle.images.portrait}`}
-        />
-      )}
+      <ImageWrapper
+        as={motion.div}
+        initial={{ opacity: 0, x: window.innerWidth }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 0.6, delay: 0.1 },
+        }}
+      >
+        {matches ? (
+          <TechnologyImage
+            src={`${process.env.PUBLIC_URL}${vehicle.images.landscape}`}
+          />
+        ) : (
+          <TechnologyImage
+            src={`${process.env.PUBLIC_URL}${vehicle.images.portrait}`}
+          />
+        )}
+      </ImageWrapper>
     </TechnologySection>
   );
 };

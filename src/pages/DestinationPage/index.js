@@ -15,16 +15,7 @@ const DestinationPage = () => {
         transition: { duration: 0.2, delay: 0.1 },
       }}
     >
-      <motion.div
-        initial={{ opacity: 0, x: -window.innerWidth }}
-        animate={{
-          opacity: 1,
-          x: 0,
-          transition: { duration: 0.5, delay: 0.2 },
-        }}
-      >
-        <Heading number="01" content="Pick your destination" />
-      </motion.div>
+      <Heading number="01" content="Pick your destination" />
       <Destination />
     </Main>
   );

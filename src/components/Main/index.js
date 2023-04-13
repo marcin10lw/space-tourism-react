@@ -5,8 +5,8 @@ export const Main = styled.main`
     padding: 0 24px;
   }
 
-  ${({ inTechPage }) =>
-    inTechPage &&
+  ${({ technology }) =>
+    technology &&
     css`
       @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         padding: 0;

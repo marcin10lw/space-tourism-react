@@ -12,16 +12,7 @@ const CrewPage = () => {
         transition: { duration: 0.2 },
       }}
     >
-      <motion.div
-        initial={{ opacity: 0, x: -window.innerWidth }}
-        animate={{
-          opacity: 1,
-          x: 0,
-          transition: { duration: 0.5, delay: 0.2 },
-        }}
-      >
-        <Heading number="02" content="meet your crew" />
-      </motion.div>
+      <Heading number="02" content="meet your crew" />
       <Crew />
     </Main>
   );
