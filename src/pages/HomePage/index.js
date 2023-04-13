@@ -1,6 +1,6 @@
 import { Main } from "../../components/Main";
 import Heading from "../../components/Heading";
-import { Button, HomeArticle, HomeSection, HomeTitle } from "./styled";
+import { Button, HomeArticle, HomeHeading, HomeSection, HomeTitle } from "./styled";
 import { Description } from "../../components/Description";
 import description from "./description";
 import { useNavigate } from "react-router-dom";
@@ -25,11 +25,11 @@ const HomePage = () => {
       }}
     >
       <HomeSection>
-        <HomeArticle>
-          <Heading home content="so, you want to travel to" />
+        <article>
+          <HomeHeading>SO, YOU WANT TO TRAVEL TO</HomeHeading>
           <HomeTitle>SPACE</HomeTitle>
           <Description>{description}</Description>
-        </HomeArticle>
+        </article>
         <Button onClick={onButtonClick}>EXPLORE</Button>
       </HomeSection>
     </Main>

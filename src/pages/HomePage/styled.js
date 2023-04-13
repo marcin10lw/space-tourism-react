@@ -8,10 +8,6 @@ export const HomeSection = styled.section`
   align-items: center;
   justify-content: space-around;
 
-  h1 {
-    margin: 0;
-  }
-
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     padding: 106px 0 90px;
     grid-template-columns: minmax(0, 450px);
@@ -25,7 +21,25 @@ export const HomeSection = styled.section`
   }
 `;
 
-export const HomeArticle = styled.article``;
+export const HomeHeading = styled.h1`
+  font-size: 28px;
+  letter-spacing: 4.72px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.colors.blue};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    font-size: 20px;
+    letter-spacing: 3.38px;
+    margin: 40px 0 0 38.5px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    margin: 24px 0 0;
+    text-align: center;
+  }
+`;
 
 export const HomeTitle = styled.h2`
   font-family: "Bellefair", sans-serif;
