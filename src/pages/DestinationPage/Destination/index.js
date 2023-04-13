@@ -1,3 +1,4 @@
+import { useSwipeable } from "react-swipeable";
 import data from "../../../data.json";
 import { useUpdateData } from "../../../useUpdateData";
 import {
@@ -10,6 +11,7 @@ import {
   DestinationList,
   DestinationSection,
   DestinationTitle,
+  ImageWrapper,
 } from "./styled";
 import { useState } from "react";
 
@@ -24,19 +26,38 @@ const Destination = () => {
     { id: 2, name: "europa", isActive: false },
     { id: 3, name: "titan", isActive: false },
   ];
-  const { listData, updateListData } = useUpdateData(initialState);
+  const { listData, updateListData } = useUpdateData(initialState, index);
 
   const onButtonClick = (id) => {
     updateListData(id);
     setIndex(id);
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (index > 2) {
+        setIndex(0);
+      } else {
+        setIndex((index) => index + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (index < 1) {
+        setIndex(3);
+      } else {
+        setIndex((index) => index - 1);
+      }
+    },
+  });
+
   return (
     <DestinationSection>
-      <DestinationImage
-        src={`${process.env.PUBLIC_URL}/${destination.images.png}`}
-        alt={destination.name}
-      />
+      <ImageWrapper {...handlers}>
+        <DestinationImage
+          src={`${process.env.PUBLIC_URL}/${destination.images.png}`}
+          alt={destination.name}
+        />
+      </ImageWrapper>
       <article>
         <nav>
           <DestinationList>

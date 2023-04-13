@@ -21,6 +21,10 @@ export const DestinationSection = styled.section`
   }
 `;
 
+export const ImageWrapper = styled.div`
+  
+`
+
 export const DestinationImage = styled.img`
   margin: auto;
 
