@@ -7,7 +7,7 @@ export const CrewSection = styled.section`
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
-  padding: 154px 0 0 11.5%;
+  padding: 154px 0 94px 11.5%;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     grid-template-columns: auto;

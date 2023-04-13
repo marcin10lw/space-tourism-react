@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HomeSection = styled.section`
   width: 100%;
-  padding-top: 250px;
+  padding: 250px 0 130px;
   display: grid;
   grid-template-columns: minmax(0, 450px) auto;
   align-items: center;

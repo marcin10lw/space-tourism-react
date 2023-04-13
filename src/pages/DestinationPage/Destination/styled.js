@@ -6,7 +6,7 @@ export const DestinationSection = styled.section`
   grid-template-columns: repeat(2, minmax(0, 445px));
   justify-content: space-around;
   align-items: center;
-  padding-top: 64px;
+  padding: 64px 0 112px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     padding: 60px 0;
