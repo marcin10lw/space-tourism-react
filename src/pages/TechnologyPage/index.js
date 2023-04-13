@@ -4,7 +4,7 @@ import Technology from "./Technology";
 
 const TechnologyPage = () => {
   return (
-    <Main>
+    <Main inTechPage>
       <Heading number="03" content="SPACE LAUNCH 101" />
       <Technology />
     </Main>
