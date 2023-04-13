@@ -14,6 +14,7 @@ import data from "../../../data.json";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { useUpdateData } from "../../../useUpdateData";
+import { useSwipeable } from "react-swipeable";
 
 const Crew = () => {
   const { crew } = data;
@@ -27,12 +28,29 @@ const Crew = () => {
     { id: 2, isActive: false },
     { id: 3, isActive: false },
   ];
-  const { listData, updateListData } = useUpdateData(initialState);
+  const { listData, updateListData } = useUpdateData(initialState, index);
 
   const onButtonClick = (id) => {
     updateListData(id);
     setIndex(id);
   };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (index > 2) {
+        setIndex(0);
+      } else {
+        setIndex((index) => index + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (index < 1) {
+        setIndex(3);
+      } else {
+        setIndex((index) => index - 1);
+      }
+    },
+  });
 
   return (
     <CrewSection>
@@ -67,7 +85,7 @@ const Crew = () => {
         </CrewArticle>
       </AnimatePresence>
       <AnimatePresence>
-        <ImageWrapper>
+        <ImageWrapper {...handlers}>
           <CrewImage
             key={pathname}
             as={motion.img}

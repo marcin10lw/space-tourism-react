@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export const useUpdateData = (initialState) => {
+export const useUpdateData = (initialState, index) => {
   const [listData, setListData] = useState(initialState);
 
   const updateListData = (id) => {
@@ -20,6 +20,10 @@ export const useUpdateData = (initialState) => {
       })
     );
   };
+
+  useEffect(() => {
+    updateListData(index);
+  }, [index]);
 
   return { listData, updateListData };
 };
