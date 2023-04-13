@@ -9,6 +9,7 @@ import {
   CrewNavigationList,
   CrewSection,
   CrewTitle,
+  ImageWrapper,
 } from "./styled";
 import data from "../../../data.json";
 
@@ -50,9 +51,11 @@ const Crew = () => {
   return (
     <CrewSection>
       <CrewArticle>
-        <CrewTitle>{crewMember.role.toLocaleUpperCase()}</CrewTitle>
-        <CrewName>{crewMember.name.toLocaleUpperCase()}</CrewName>
-        <CrewDescription>{crewMember.bio}</CrewDescription>
+        <div>
+          <CrewTitle>{crewMember.role.toLocaleUpperCase()}</CrewTitle>
+          <CrewName>{crewMember.name.toLocaleUpperCase()}</CrewName>
+          <CrewDescription>{crewMember.bio}</CrewDescription>
+        </div>
         <CrewNavigation>
           <CrewNavigationList>
             {listData.map(({ id, isActive }) => (
@@ -66,10 +69,12 @@ const Crew = () => {
           </CrewNavigationList>
         </CrewNavigation>
       </CrewArticle>
-      <CrewImage
-        src={`${process.env.PUBLIC_URL}${crewMember.images.png}`}
-        alt=""
-      />
+      <ImageWrapper>
+        <CrewImage
+          src={`${process.env.PUBLIC_URL}${crewMember.images.png}`}
+          alt=""
+        />
+      </ImageWrapper>
     </CrewSection>
   );
 };
