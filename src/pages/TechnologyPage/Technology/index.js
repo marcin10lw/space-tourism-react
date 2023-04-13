@@ -13,6 +13,7 @@ import {
 import data from "../../../data.json";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useUpdateData } from "../../../useUpdateData";
 
 const Technology = () => {
   const matches = useMediaQuery("(max-width: 1180px)");
@@ -20,29 +21,12 @@ const Technology = () => {
   const [index, setIndex] = useState(0);
   const vehicle = technology[index];
 
-  const [listData, setListData] = useState([
+  const initialState = [
     { id: 0, isActive: true },
     { id: 1, isActive: false },
     { id: 2, isActive: false },
-  ]);
-
-  const updateListData = (id) => {
-    setListData((listData) =>
-      listData.map((element) => {
-        if (element.id === id) {
-          return {
-            ...element,
-            isActive: true,
-          };
-        }
-
-        return {
-          ...element,
-          isActive: false,
-        };
-      })
-    );
-  };
+  ];
+  const { listData, updateListData } = useUpdateData(initialState);
 
   const onButtonClick = (id) => {
     updateListData(id);

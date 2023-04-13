@@ -13,6 +13,7 @@ import {
 import data from "../../../data.json";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import { useUpdateData } from "../../../useUpdateData";
 
 const Crew = () => {
   const { crew } = data;
@@ -20,30 +21,13 @@ const Crew = () => {
   const crewMember = crew[index];
   const { pathname } = useLocation();
 
-  const [listData, setListData] = useState([
+  const initialState = [
     { id: 0, isActive: true },
     { id: 1, isActive: false },
     { id: 2, isActive: false },
     { id: 3, isActive: false },
-  ]);
-
-  const updateListData = (id) => {
-    setListData((listData) =>
-      listData.map((element) => {
-        if (element.id === id) {
-          return {
-            ...element,
-            isActive: true,
-          };
-        }
-
-        return {
-          ...element,
-          isActive: false,
-        };
-      })
-    );
-  };
+  ];
+  const { listData, updateListData } = useUpdateData(initialState);
 
   const onButtonClick = (id) => {
     updateListData(id);

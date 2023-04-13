@@ -1,4 +1,5 @@
 import data from "../../../data.json";
+import { useUpdateData } from "../../../useUpdateData";
 import {
   DestinationButton,
   DestinationDescription,
@@ -17,30 +18,13 @@ const Destination = () => {
   const [index, setIndex] = useState(0);
   const destination = destinations[index];
 
-  const [listData, setListData] = useState([
+  const initialState = [
     { id: 0, name: "moon", isActive: true },
     { id: 1, name: "mars", isActive: false },
     { id: 2, name: "europa", isActive: false },
     { id: 3, name: "titan", isActive: false },
-  ]);
-
-  const updateListData = (id) => {
-    setListData((listData) =>
-      listData.map((listElement) => {
-        if (listElement.id === id) {
-          return {
-            ...listElement,
-            isActive: true,
-          };
-        }
-
-        return {
-          ...listElement,
-          isActive: false,
-        };
-      })
-    );
-  };
+  ];
+  const { listData, updateListData } = useUpdateData(initialState);
 
   const onButtonClick = (id) => {
     updateListData(id);
