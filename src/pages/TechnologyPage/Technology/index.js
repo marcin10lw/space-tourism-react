@@ -59,7 +59,7 @@ const Technology = () => {
         animate={{
           opacity: 1,
           x: 0,
-          transition: { duration: 0.6, delay: 0.1 },
+          transition: { duration: 0.4 },
         }}
       >
         <nav>
@@ -90,7 +90,7 @@ const Technology = () => {
         animate={{
           opacity: 1,
           x: 0,
-          transition: { duration: 0.6, delay: 0.1 },
+          transition: { duration: 0.4 },
         }}
       >
         {matches ? (
