@@ -12,6 +12,11 @@ export const TechnologySection = styled.section`
     gap: 60px;
     padding: 60px 0 97px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    padding: 32px 0 80px;
+    gap: 34px;
+  }
 `;
 
 export const TechnologyArticle = styled.article`
@@ -22,6 +27,11 @@ export const TechnologyArticle = styled.article`
     flex-direction: column;
     gap: 44px;
     text-align: center;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    gap: 26px;
+    padding: 0 24px;
   }
 `;
 
@@ -60,6 +70,15 @@ export const TechnologyButton = styled.button`
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     width: 60px;
     height: 60px;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    letter-spacing: 1px;
   }
 
   ${({ isActive }) =>
@@ -73,6 +92,11 @@ export const TechnologyButton = styled.button`
 export const TechnologyName = styled.div`
   letter-spacing: 2.7px;
   color: ${({ theme }) => theme.colors.blue};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 14px;
+    letter-spacing: 2.36px;
+  }
 `;
 
 export const TechnologyTitle = styled.h2`
@@ -85,6 +109,11 @@ export const TechnologyTitle = styled.h2`
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     margin: 16px 0 16px;
     font-size: 40px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    margin: 9px 0 16px;
+    font-size: 24px;
   }
 `;
 
