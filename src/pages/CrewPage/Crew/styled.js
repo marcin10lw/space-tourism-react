@@ -14,6 +14,11 @@ export const CrewSection = styled.section`
     justify-content: center;
     padding: 60px 0 0;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    padding: 32px 0 104px;
+    gap: 32px;
+  }
 `;
 
 export const CrewArticle = styled.article`
@@ -27,8 +32,11 @@ export const CrewArticle = styled.article`
     gap: 40px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     grid-row: 2 / 3;
+    flex-direction: column-reverse;
+    z-index: auto;
+    gap: 32px;
   }
 `;
 
@@ -38,6 +46,10 @@ export const CrewTitle = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     font-size: 24px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 16px;
   }
 `;
 
@@ -50,6 +62,10 @@ export const CrewName = styled.h2`
     font-size: 40px;
     margin: 8px 0 16px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 24px;
+  }
 `;
 
 export const CrewDescription = styled(Description)`
@@ -60,17 +76,14 @@ export const CrewDescription = styled(Description)`
     max-width: 592px;
     height: 84px;
   }
-`;
 
-export const CrewNavigation = styled.nav`
-  /* margin-top: 88px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
-    margin-top: 40px;
-  } */
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    height: auto;
+  }
 `;
 
 export const CrewNavigationList = styled.ul`
+  margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -130,8 +143,8 @@ export const CrewImage = styled.img`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     left: 50%;
-    transform: translateX(-50%);
-    max-height: 50%;
+    transform: translateX(-50%) !important;
+    max-height: 45%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
