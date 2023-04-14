@@ -1,8 +1,37 @@
-# **Development in progress...**
+# Marcin Augun - Space-tourism
 
-[DEMO](https://marcin10lw.github.io/space-tourism-react/)
+## Description
 
-## Getting Started with Create React App
+This time I have created Space-tourism page based on one of the numerous challenges of [Frontend Mentor](https://www.frontendmentor.io/home).
+
+## Check out the [Demo](https://marcin10lw.github.io/space-tourism-react/#/home) 👈
+
+As always this was an excellent learning opportunity in which I could improve making responsive multi-page websites using [React](https://legacy.reactjs.org/) and [React Router](https://reactrouter.com/en/main).
+
+This was excellent chance to practise animations using [Framer Motion](https://www.framer.com/motion/) library and swipe events using [React Swipeable](https://www.npmjs.com/package/react-swipeable).
+
+## Technologies used
+
+    -REACT.JS
+    -REACT-ROUTER
+    -STYLED COMPONENTS
+    -REACT-SWIPEABLE
+    -FRAMER-MOTION
+    -CREATE-REACT-APP
+    -WEBPACK
+    -BABEL
+    -NORMALIZE.CSS
+    -ES6+ FEATURES
+
+## Page preview
+
+### Desktop preview
+
+![](space-tourism-desktop.gif)
+
+### Mobile preview
+
+![](space-tourism-mobile.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
