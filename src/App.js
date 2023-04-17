@@ -14,7 +14,7 @@ function App() {
     <>
       <GlobalStyle path={location.pathname} />
       <Header />
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
