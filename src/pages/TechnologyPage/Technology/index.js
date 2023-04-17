@@ -15,6 +15,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useUpdateData } from "../../../useUpdateData";
 import { useSwipeable } from "react-swipeable";
+import { articleVariants, imageVariants } from "../variants";
 
 const Technology = () => {
   const matches = useMediaQuery("(max-width: 1180px)");
@@ -55,12 +56,9 @@ const Technology = () => {
     <TechnologySection>
       <TechnologyArticle
         as={motion.article}
-        initial={{ opacity: 0, x: -window.innerWidth }}
-        animate={{
-          opacity: 1,
-          x: 0,
-          transition: { duration: 0.4, delay: 0.3 },
-        }}
+        variants={articleVariants}
+        initial="hidden"
+        animate="visible"
       >
         <nav>
           <TechnologyNavList>
@@ -86,12 +84,9 @@ const Technology = () => {
       <ImageWrapper
         {...handlers}
         as={motion.div}
-        initial={{ opacity: 0, x: window.innerWidth }}
-        animate={{
-          opacity: 1,
-          x: 0,
-          transition: { duration: 0.4, delay: 0.3 },
-        }}
+        variants={imageVariants}
+        initial="hidden"
+        animate="visible"
       >
         {matches ? (
           <TechnologyImage
