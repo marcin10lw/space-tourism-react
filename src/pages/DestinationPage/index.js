@@ -2,18 +2,16 @@ import { motion } from "framer-motion";
 import Destination from "./Destination";
 import Heading from "../../components/Heading";
 import { Main } from "../../components/Main";
+import { destinationVariants } from "./variants";
 
 const DestinationPage = () => {
   return (
     <Main
       as={motion.main}
-      initial={{ opacity: 0, x: window.innerWidth }}
-      animate={{ opacity: 1, x: 0, transition: { duration: 0.4 } }}
-      exit={{
-        x: 100,
-        opacity: 0,
-        transition: { duration: 0.2, delay: 0.1 },
-      }}
+      variants={destinationVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
     >
       <Heading number="01" content="Pick your destination" />
       <Destination />

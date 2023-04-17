@@ -14,6 +14,10 @@ import {
   ImageWrapper,
 } from "./styled";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { imageVariants } from "../variants";
+
+
 
 const Destination = () => {
   const { destinations } = data;
@@ -52,7 +56,7 @@ const Destination = () => {
 
   return (
     <DestinationSection>
-      <ImageWrapper {...handlers}>
+      <ImageWrapper {...handlers} as={motion.div} variants={imageVariants}>
         <DestinationImage
           src={`${process.env.PUBLIC_URL}/${destination.images.png}`}
           alt={destination.name}
