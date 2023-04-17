@@ -24,6 +24,7 @@ export const BackDrop = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 888;
 
   ${({ isMenuOpen }) =>
     isMenuOpen &&
@@ -137,22 +138,28 @@ export const StyledNavLink = styled(NavLink)`
   letter-spacing: 2.7px;
   position: relative;
 
+  &:before {
+    content: "";
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: ${({ theme }) => theme.colors.white};
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    transition: width 200ms ease-in-out;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+      display: none;
+    }
+  }
+
   &:hover {
     &:before {
-      content: "";
-      display: block;
       width: 100%;
-      height: 3px;
-      background-color: ${({ theme }) => theme.colors.white};
-      opacity: 0.5;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: 1;
-
-      @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-        display: none;
-      }
     }
   }
 

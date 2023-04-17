@@ -21,9 +21,7 @@ export const DestinationSection = styled.section`
   }
 `;
 
-export const ImageWrapper = styled.div`
-  
-`
+export const ImageWrapper = styled.div``;
 
 export const DestinationImage = styled.img`
   margin: auto;
@@ -69,16 +67,21 @@ export const DestinationButton = styled.button`
     letter-spacing: 2.36px;
   }
 
+  &:before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: ${({ theme }) => theme.colors.white};
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0px;
+    transition: width 180ms ease-in-out;
+  }
+
   &:hover {
     &:before {
-      content: "";
-      display: block;
-      height: 3px;
       width: 100%;
-      background-color: ${({ theme }) => theme.colors.white};
-      opacity: 0.5;
-      position: absolute;
-      bottom: 0px;
     }
   }
 

@@ -105,6 +105,7 @@ export const CrewButton = styled.button`
   height: 15px;
   border-radius: 50%;
   cursor: pointer;
+  transition: opacity 180ms ease-in-out;
 
   &:hover {
     opacity: 0.5;

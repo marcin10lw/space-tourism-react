@@ -62,6 +62,7 @@ export const TechnologyButton = styled.button`
   border: 1px solid ${({ theme }) => theme.colors.transparentWhite};
   border-radius: 50%;
   cursor: pointer;
+  transition: all 180ms ease-in-out;
 
   &:hover {
     border: 1px solid ${({ theme }) => theme.colors.white};
