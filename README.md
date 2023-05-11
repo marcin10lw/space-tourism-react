@@ -4,6 +4,13 @@
 
 This time I have created Space-tourism page based on one of the numerous challenges of [Frontend Mentor](https://www.frontendmentor.io/home).
 
+## Challenges
+Users should be able to:
+
+    - View the optimal layout for each of the website's pages depending on their device's screen size
+    - See hover states for all interactive elements on the page
+    - View each page and be able to toggle between the tabs to see new information
+
 ## Check out the [Demo](https://marcin10lw.github.io/space-tourism-react/#/home) 👈
 
 As always this was an excellent learning opportunity in which I could improve making responsive multi-page websites using [React](https://legacy.reactjs.org/) and [React Router](https://reactrouter.com/en/main).
