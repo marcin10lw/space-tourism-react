@@ -8,9 +8,9 @@ This time I have created Space-tourism page based on one of the numerous challen
 
 Users should be able to:
 
-    - View the optimal layout for each of the website's pages depending on their device's screen size
-    - See hover states for all interactive elements on the page
-    - View each page and be able to toggle between the tabs to see new information
+ - View the optimal layout for each of the website's pages depending on their device's screen size
+ - See hover states for all interactive elements on the page
+ - View each page and be able to toggle between the tabs to see new information
 
 ## Check out the [Demo](https://marcin10lw.github.io/space-tourism-react/#/home) 👈
 
@@ -51,7 +51,7 @@ To get a local copy up and running follow these simple steps.
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/<your-username>/space-tourism-react.git
+git clone https://github.com/marcin10lw/space-tourism-react
 ```
 
 2. Change into the project directory:
@@ -73,11 +73,3 @@ npm start
 ```
 
 Then open http://localhost:3000 to view the app in your browser.
-
-### Building the app
-
-```bash
-npm run build
-```
-
-The output will be generated in the `build` directory. You can then serve the app using a static file server.
