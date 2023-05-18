@@ -6,11 +6,11 @@ This time I have created Space-tourism page based on one of the numerous challen
 
 ## Challenges
 
-Users should be able to:
+The Space Tourism website allows users to:
 
- - View the optimal layout for each of the website's pages depending on their device's screen size
- - See hover states for all interactive elements on the page
- - View each page and be able to toggle between the tabs to see new information
+ - View the optimal layout for each page based on their device's screen size.
+ - See hover states for interactive elements.
+ - Navigate through different pages and toggle between tabs to explore new information.
 
 ## Check out the [Demo](https://marcin10lw.github.io/space-tourism-react/#/home) 👈
 
@@ -38,8 +38,6 @@ This was excellent chance to practise animations using [Framer Motion](https://w
 ### Mobile preview
 
 ![](space-tourism-mobile.gif)
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Getting Started
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
