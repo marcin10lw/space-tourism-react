@@ -12,7 +12,7 @@ The Space Tourism website allows users to:
  - See hover states for interactive elements.
  - Navigate through different pages and toggle between tabs to explore new information.
 
-## Check out the [Demo](https://marcin10lw.github.io/space-tourism-react/#/home) 👈
+## Live Site URL: [marcin10lw.github.io/space-tourism-react](https://marcin10lw.github.io/space-tourism-react/#/home)
 
 As always this was an excellent learning opportunity in which I could improve making responsive multi-page websites using [React](https://legacy.reactjs.org/) and [React Router](https://reactrouter.com/en/main).
 
