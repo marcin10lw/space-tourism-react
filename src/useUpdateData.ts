@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-type InitialState = { id: number; active: boolean }[];
+type InitialState = { id: number; isActive: boolean }[];
 
 export const useUpdateData = (initialState: InitialState, index: number) => {
   const [listData, setListData] = useState(initialState);

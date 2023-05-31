@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 type MainProps = {
-  technology: boolean;
+  technology?: boolean;
 };
 
 export const Main = styled.main<MainProps>`

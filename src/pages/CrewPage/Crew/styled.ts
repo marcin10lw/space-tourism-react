@@ -96,7 +96,11 @@ export const CrewNavigationList = styled.ul`
   }
 `;
 
-export const CrewButton = styled.button`
+type CrewButtonProps = {
+  isActive: boolean;
+};
+
+export const CrewButton = styled.button<CrewButtonProps>`
   padding: 0;
   border: none;
   background-color: ${({ theme }) => theme.colors.white};
