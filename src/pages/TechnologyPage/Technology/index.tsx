@@ -30,7 +30,7 @@ const Technology = () => {
   ];
   const { listData, updateListData } = useUpdateData(initialState, index);
 
-  const onButtonClick = (id) => {
+  const onButtonClick = (id: number) => {
     updateListData(id);
     setIndex(id);
   };

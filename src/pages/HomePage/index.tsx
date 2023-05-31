@@ -4,7 +4,7 @@ import { Description } from "../../components/Description";
 import description from "./description";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { buttonVariants, childVariants, homeVariants } from "./variants";
+import { buttonVariants, homeVariants } from "./variants";
 
 const HomePage = () => {
   const navigate = useNavigate();

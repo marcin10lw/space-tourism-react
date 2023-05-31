@@ -50,7 +50,11 @@ export const TechnologyNavList = styled.ul`
   }
 `;
 
-export const TechnologyButton = styled.button`
+type TechnologyButtonProps = {
+  isActive: boolean;
+};
+
+export const TechnologyButton = styled.button<TechnologyButtonProps>`
   padding: 0;
   width: 80px;
   height: 80px;
