@@ -52,7 +52,11 @@ export const DestinationList = styled.ul`
   }
 `;
 
-export const DestinationButton = styled.button`
+type DestinationButtonProps = {
+  isActive: boolean;
+};
+
+export const DestinationButton = styled.button<DestinationButtonProps>`
   border: none;
   background-color: transparent;
   color: ${({ theme }) => theme.colors.blue};

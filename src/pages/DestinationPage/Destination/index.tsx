@@ -17,8 +17,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { imageVariants } from "../variants";
 
-
-
 const Destination = () => {
   const { destinations } = data;
   const [index, setIndex] = useState(0);
@@ -32,7 +30,7 @@ const Destination = () => {
   ];
   const { listData, updateListData } = useUpdateData(initialState, index);
 
-  const onButtonClick = (id) => {
+  const onButtonClick = (id: number) => {
     updateListData(id);
     setIndex(id);
   };
@@ -71,7 +69,7 @@ const Destination = () => {
                   onClick={() => onButtonClick(id)}
                   isActive={isActive}
                 >
-                  {name.toLocaleUpperCase()}
+                  {name && name.toLocaleUpperCase()}
                 </DestinationButton>
               </li>
             ))}
