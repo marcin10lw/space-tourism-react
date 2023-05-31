@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 
-export const useUpdateData = (initialState, index) => {
+type InitialState = { id: number; active: boolean }[];
+
+export const useUpdateData = (initialState: InitialState, index: number) => {
   const [listData, setListData] = useState(initialState);
 
-  const updateListData = (id) => {
+  const updateListData = (id: number) => {
     setListData((listData) =>
       listData.map((listElement) => {
         if (listElement.id === id) {

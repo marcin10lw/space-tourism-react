@@ -9,10 +9,11 @@ import TechnologyPage from "./pages/TechnologyPage";
 
 function App() {
   const location = useLocation();
+  const pathname = location.pathname;
 
   return (
     <>
-      <GlobalStyle path={location.pathname} />
+      <GlobalStyle path={pathname} />
       <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>

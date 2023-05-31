@@ -1,4 +1,5 @@
 import { createGlobalStyle, css } from "styled-components";
+
 import homeBackgroundDesktop from "./assets/home/background-home-desktop.jpg";
 import homeBackgroundTablet from "./assets/home/background-home-tablet.jpg";
 import homeBackgroundMobile from "./assets/home/background-home-mobile.jpg";
@@ -15,7 +16,11 @@ import technologyBackgroundDesktop from "./assets/technology/background-technolo
 import technologyBackgroundTablet from "./assets/technology/background-technology-tablet.jpg";
 import technologyBackgroundMobile from "./assets/technology/background-technology-mobile.jpg";
 
-const GlobalStyle = createGlobalStyle`
+type GlobalStyleProps = {
+  path: string | "/home" | "/destination" | "/crew" | "/technology";
+};
+
+const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   html {
     box-sizing: border-box;
   }
@@ -51,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
 
         @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
           background-image: url(${homeBackgroundMobile});
-        } ;
+        }
       `}
 
     ${({ path }) =>
@@ -66,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
 
         @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
           background-image: url(${destinationBackgroundMobile});
-        } ;
+        }
       `}
 
     ${({ path }) =>
@@ -80,7 +85,7 @@ const GlobalStyle = createGlobalStyle`
 
         @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
           background-image: url(${crewBackgroundMobile});
-        } ;
+        }
       `}
 
     ${({ path }) =>
@@ -95,7 +100,7 @@ const GlobalStyle = createGlobalStyle`
 
         @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
           background-image: url(${technologyBackgroundMobile});
-        } ;
+        }
       `}
   }
 `;
