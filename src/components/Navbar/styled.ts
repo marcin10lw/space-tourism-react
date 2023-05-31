@@ -17,7 +17,11 @@ export const OpenMenuSwipe = styled.div`
   }
 `;
 
-export const BackDrop = styled.div`
+type BackDropProps = {
+  isMenuOpen: boolean;
+};
+
+export const BackDrop = styled.div<BackDropProps>`
   display: none;
   position: fixed;
   top: 0;
@@ -33,7 +37,9 @@ export const BackDrop = styled.div`
     `}
 `;
 
-export const StyledNavbar = styled.nav`
+type StyledNavbarProps = BackDropProps;
+
+export const StyledNavbar = styled.nav<StyledNavbarProps>`
   flex-basis: 50%;
   display: flex;
   align-items: center;

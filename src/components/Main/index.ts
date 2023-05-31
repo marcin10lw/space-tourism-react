@@ -1,6 +1,10 @@
 import styled, { css } from "styled-components";
 
-export const Main = styled.main`
+type MainProps = {
+  technology: boolean;
+};
+
+export const Main = styled.main<MainProps>`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     padding: 0 24px;
   }

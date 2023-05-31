@@ -1,7 +1,11 @@
-import { motion } from "framer-motion";
 import { StyledHeading, HeadingNumber } from "./styled";
 
-const Heading = ({ number, content }) => {
+type HeadingProps = {
+  number: string;
+  content: string;
+};
+
+const Heading = ({ number, content }: HeadingProps) => {
   return (
     <StyledHeading>
       {number && <HeadingNumber>{number}</HeadingNumber>}
