@@ -8,9 +8,9 @@ This time I have created Space-tourism page based on one of the numerous challen
 
 The Space Tourism website allows users to:
 
- - View the optimal layout for each page based on their device's screen size.
- - See hover states for interactive elements.
- - Navigate through different pages and toggle between tabs to explore new information.
+- View the optimal layout for each page based on their device's screen size.
+- See hover states for interactive elements.
+- Navigate through different pages and toggle between tabs to explore new information.
 
 ## Live Site URL: [marcin10lw.github.io/space-tourism-react](https://marcin10lw.github.io/space-tourism-react/#/home)
 
@@ -21,6 +21,7 @@ This was excellent chance to practise animations using [Framer Motion](https://w
 # 💻 Project Tech Stack:
 
 ![react](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black)
+![typescript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white)
 ![reactrouter](https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![framer motion](https://img.shields.io/badge/Framer--Motion-0055FF.svg?style=for-the-badge&logo=Framer&logoColor=white)
@@ -40,6 +41,7 @@ This was excellent chance to practise animations using [Framer Motion](https://w
 ![](space-tourism-mobile.gif)
 
 ## Getting Started
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 To get a local copy up and running follow these simple steps.
