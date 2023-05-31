@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     font-family: "Barlow Condensed", sans-serif;
     color: ${({ theme }) => theme.colors.white};
     background: #0b0e17;
+    overflow-x: hidden;
   }
 
   #root {
